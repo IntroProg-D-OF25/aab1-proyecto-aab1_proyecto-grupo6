@@ -28,32 +28,20 @@ public class proyecto {
         Scanner tcl;
         Random random;
 
-        // Título y símbolo
-        String titulo;
-        char simbolo;
-
         // Materias
-        String materia1;
-        String materia2;
-        String materia3;
-        String materia4;
-        String materia5;
+        String materia1, materia2, materia3, materia4, materia5;
 
         // Variables para los estudiantes
-        String nombre;
-        String cedula;
+        String nombre, cedula, materia;
         float APE, ACD, AA, sumaNotas;
-        String materia;
 
         // Porcentaje 
         int procentaje;
+        int i = 1;
 
         // Inicialización de variables
         tcl = new Scanner(System.in);
         random = new Random();
-
-        titulo = "Sistema académico para la UTPL";
-        simbolo = '=';
 
         materia1 = "Programación";
         materia2 = "Humanismo";
@@ -62,14 +50,12 @@ public class proyecto {
         materia5 = "Estructuras Discretas";
 
         // Mostrar título
-        System.out.println(titulo);
-        for (int i = 0; i <= titulo.length(); i++) {
-            System.out.print(simbolo);
-        }
+        System.out.println("Sistema académico para la UTPL");
+        System.out.println("=================================");
         System.out.println();
 
         // Procesar estudiantes
-        for (int i = 1; i <= 6; i++) {
+        while (i <= 6) {
             System.out.println("Ingrese el nombre del estudiante " + i + ": ");
             nombre = tcl.nextLine();
 
@@ -111,6 +97,8 @@ public class proyecto {
             System.out.println("Materia elegida: " + materia);
             System.out.println("////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
             System.out.println();
+
+            i++;
         }
     }
 }
