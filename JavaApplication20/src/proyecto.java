@@ -28,6 +28,10 @@ public class proyecto {
         Scanner tcl;
         Random random;
 
+        // Título y símbolo
+        String titulo;
+        char simbolo;
+
         // Materias
         String materia1, materia2, materia3, materia4, materia5;
 
@@ -102,6 +106,7 @@ public class proyecto {
         }
     }
 }
+
 /***
  * run:
 Sistema acad�mico para la UTPL
