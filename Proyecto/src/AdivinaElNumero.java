@@ -8,11 +8,11 @@ public class AdivinaElNumero {
 
         boolean jugarDeNuevo;
         do {
-            int numeroSecreto = random.nextInt(100) + 1;
-            int puntos = 5;
+            int numeroSecreto = random.nextInt(20) + 1;
+            int puntos = 10;
 
             System.out.println("¡Bienvenido al Adivina el número!");
-            System.out.println("Tienes " + puntos + " puntos. Trata de adivinar el número entre 1 y 100.");
+            System.out.println("Tienes " + puntos + " puntos. Trata de adivinar el número entre 1 y 20.");
 
             while (puntos > 0) {
                 System.out.print("Introduce tu número: ");
@@ -27,18 +27,18 @@ public class AdivinaElNumero {
                     System.out.println("¡Incorrecto! Te quedan " + puntos + " puntos.");
 
                     if (intento < numeroSecreto) {
-                        System.out.println("Pista: El número secreto es mayor que " + intento + ".");
+                        System.out.println("Pista: El número  es mayor que " + intento + ".");
                     } else {
-                        System.out.println("Pista: El número secreto es menor que " + intento + ".");
+                        System.out.println("Pista: El número  es menor que " + intento + ".");
                     }
 
                     // Si el número es múltiplo de un número específico, lo mencionamos
                     if (numeroSecreto % 2 == 0) {
-                        System.out.println("Pista extra: El número secreto es múltiplo de 2.");
+                        System.out.println("Pista extra: El número  es múltiplo de 2.");
                     } else if (numeroSecreto % 3 == 0) {
-                        System.out.println("Pista extra: El número secreto es múltiplo de 3.");
+                        System.out.println("Pista extra: El número  es múltiplo de 3.");
                     } else {
-                        System.out.println("Pista extra: El número secreto no es múltiplo de 2 ni de 3.");
+                        System.out.println("Pista extra: El número  no es múltiplo de 2 ni de 3.");
                     }
 
                     int a = 0, b = 1, fib = 0;
@@ -66,10 +66,10 @@ public class AdivinaElNumero {
                 }
             }
 
-            System.out.print("¿Quieres jugar de nuevo? (si/no): ");
+            System.out.print("¿Quieres volver a jugar? (si/no): ");
 
             jugarDeNuevo = scanner.next().equals("si");
-
+            
         } while (jugarDeNuevo);
 
         scanner.close();
